@@ -1,27 +1,13 @@
-# AngularTodoList
+# Angular CLI Workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+During this workshop we will explore the Angular CLI (Command Line Interface) and how it can help you quickly and easily develop single-page web applications by creating a basic one from scratch. What we will learn includes how to:
 
-## Development server
+* Scaffold a new Angular application and understand its basic structure
+* Create reusable components
+* Route between multiple "pages"
+* Share data/state across the application with services
+* Fetch data from a back-end / async stuff??
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Setup
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ahead of this workshop there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training upon.
