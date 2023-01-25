@@ -17,10 +17,11 @@ Ahead of this workshop there is a small amount of setup required to install the 
     * [Node.js 16.16.0 with NPM 8.11.0 or newer](https://nodejs.org/en/download/)
     * A terminal application. The Command Prompt on Windows or Terminal on OSX should be just fine unless you want something different.
     * A Git client. If you do not have one we recommend [GitHub Desktop](https://desktop.github.com/).
-    * Your preferred text editor. Any basic editor will work, but if you are looking for a more complete environment we recommend [Visual Studio Code](https://code.visualstudio.com/).
-		* If you choose to use VSCode, it integrates both the terminal and Git client for convenience. We recommend it.
-1. Install the Angular CLI...
-1. Please run the following command in your terminal to verify everything is installed and configured appropriately. You should have Angular CLI version 14 or newer, Node version 16.16.0 or newer, and NPM (package manager) version 8.11.0 or newer:
+    * Your preferred text editor. Any basic editor will work, but we would highly recommend [Visual Studio Code](https://code.visualstudio.com/) to make things much easier.
+		* VS Code integrates both the terminal and Git client, and has shortcuts for debugging and testing for convenience.
+		* You can optionally install the `Angular Language Service` extension for VS Code to provide some helpful shortcuts and extra compilation error messages. (To install, select Extensions on the left-hand sidebar, which looks like four squares with one broken away, and then search for the extenstion at the top. Select it and click the Install button.)
+1. In your terminal, run `npm install -g @angular/cli` to install the Angular CLI. This will make the `ng` command globally available. It's what will to most of the magic for us later.
+1. Please run `ng version` in your terminal to verify everything is installed and configured appropriately. You should have `Angular CLI` version 14 or newer, `Node` version 16.16.0 or newer, and NPM (`Package Manager`) version 8.11.0 or newer:
 
       ```
       $ ng version
@@ -48,6 +49,7 @@ Ahead of this workshop there is a small amount of setup required to install the 
       @angular-devkit/schematics   14.1.1 (cli-only)
       @schematics/angular          14.1.1 (cli-only)
       ```
-1. If you are not familiar with Docker images or you do not use them regularly you should consider doing the optional [Exercise 0](/kube-101/exercises/docker-image). It walks you through creating a Docker image which contains the application used for the exercises in this workshop.
+
+That's it! There is no code to check out since we will be starting from scratch.
 
 **Please contact your trainer if you have any issues during the setup process.**
