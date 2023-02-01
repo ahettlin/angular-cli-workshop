@@ -45,7 +45,9 @@ Build at: 2023-01-31T21:27:17.608Z - Hash: b27fe04d93b98a2c - Time: 16846ms
 
 Open http://localhost:4200/ in your browser as the output suggests.
 
-You should see a smple page with some links to Angular documentation and some buttons to show some example CLI commands.
+You should see a sample page with some links to Angular documentation and some buttons to show some example CLI commands.
+
+<img src="./exercise-images/serve.png" alt="Image of the generated application running in a browser" width="500"/>
 
 When you're done looking at this page, you can close the browser window/tab and then cancel the `ng serve` command by pressing `ctrl-c` in your terminal if you're on Windows, or `cmd-c` if you're on OSX.
 
@@ -84,9 +86,9 @@ Now that we've seen the output of our starting point, lets take a look at the st
 
 In VSCode, make sure you're on the Explorer tab (the top button on the far-left that looks like stacked papers). Expand all of the folders under the projet name (Will be the name of the directory that you checked out the project to). You should see something like this.
 
-<p style="text-align:center">
-    <img src="./exercise-images/project_structure.png" alt="Image of the project file and folder structure as displayed in VS Code" width="350"/>
-</p>
+
+<img src="./exercise-images/project_structure.png" alt="Image of the project file and folder structure as displayed in VS Code" width="350"/>
+
 
 Lets start with the files in the root of the project and work our way down from there. 
 
