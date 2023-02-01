@@ -203,7 +203,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     // inside the component, you are free to provide whatever variables, functions, etc that you like. Anything that is marked public is accessible on the template.
 
-    // this is a public class variable. You can see it is referenced in the template to display the app name.
+    // this is a public class variable. See if you find where it is referenced in the template to display the app name.
     title = 'angular-todo-list';
 }
 ```
@@ -212,4 +212,4 @@ export class AppComponent {
 
 ## Conclusion
 
-Phew! That's everything to get an Angular single-page app up and running. Aren't you glad the CLI did all that work for you? And not only do we have an app, but we have a test suite set up as well. We are now ready to start writing custom code in the next exercise.
+Phew! That's everything to get a basic Angular single-page app up and running. Aren't you glad the CLI did all that work for you? And not only do we have an app, but we have a test suite set up as well. We are now ready to start writing custom code in the next exercise.
