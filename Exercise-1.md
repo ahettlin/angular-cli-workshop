@@ -18,7 +18,7 @@ A couple of notes:
 
 ## Run the application
 
-The `ng new` command has generated a fully-functional single-page applicaiton for us, rady to be customized to our needs. For now, let's run it and see what it's given us. In your terminal, run:
+The `ng new` command has generated a fully-functional single-page application for us, ready to be customized to our needs. For now, let's run it and see what it's given us. In your terminal, run:
 
 ```
 ng serve
