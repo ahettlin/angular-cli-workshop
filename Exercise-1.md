@@ -2,9 +2,11 @@
 
 In this exercise, we will generate a new project and explore everything that the Angular CLI gives us to start with. It takes care of a lot of boilerplate setup so that you can dive right into working on the important parts of your app and not get bogged down in setup and configuration.
 
+It's not necessary, but in order to make catching up easier if you get behind in the workshop, clone [this repository](https://github.com/ahettlin/angular-cli-workshop.git) into a directory on your machine, and then switch to the `exercise-1` branch. The branch should be nearly empty aside from the exercise instructions. All terminal commands should be run from the directory you cloned the repository into, unless specified otherwise.
+
 ## Generate the application
 
-Run the following command in your terminal. Make sure you run it in the root directory for this project.
+Run the following command in your terminal. Again, make sure you run it in the directory the project repository was cloned into.
 
   ```
   ng new angular-todo-list --directory ./ --style scss --routing true
@@ -18,14 +20,14 @@ A couple of notes:
 
 ## Run the application
 
-The `ng new` command has generated a fully-functional single-page application for us, ready to be customized to our needs. For now, let's run it and see what it's given us. In your terminal, run:
+The `ng new` command has generated a fully-functional single-page application for us, ready to be customized to our needs. For now, let's run it and see what it's given us. 
 
+Run:
 ```
 ng serve
 ```
 
-the output should look something like
-
+Example output:
 ```
 ✔ Browser application bundle generation complete.
 
@@ -57,8 +59,14 @@ It is not always appropriate to serve an application with `ng serve`. To generat
 
 ## Execute tests
 
-The Angular CLI has also helpfully set us up with a testing framework. To run the tests, execute `ng test` in your terminal. After a moment, a browser window will open and you should see output similar to this in your terminal:
+The Angular CLI has also helpfully set us up with a testing framework.
 
+Run:
+```
+ng test
+```
+
+After a moment, a browser window will open and you should see output similar to this in your terminal:
 ```
 ✔ Browser application bundle generation complete.
 01 02 2023 10:48:41.484:WARN [karma]: No captured browser, open http://localhost:9876/
@@ -74,7 +82,7 @@ More detail is shown in the browser window as well.
 
 <img src="./exercise-images/tests.png" alt="Image of the tests results in the browser" width="500"/>
 
-Note that the terminal command doesn't complete. While this is running, you can modify both your source files or your specs (tests) and the tests will automatically rerun on save. You can cancel the tests by pressing `ctrl-c` or `cmd-c` in your terminal. The browser window will close automatically. 
+Note that the terminal command continues to run. While this is running, you can modify both your source files or your specs (tests) and the tests will automatically rerun on save. You can cancel the tests by pressing `ctrl-c` or `cmd-c` in your terminal. The browser window will close automatically. 
 
 You can also generate a code coverage report by running the command with the `--code-coverage` option. This will generate an HTML report inside a `coverage` folder at the root of the project. You may try this if you wish.
 
@@ -104,15 +112,15 @@ Adding new dependencies is outside the scope of this workshop, so we will not go
 
 ### Build configuration
 
-Angular handles the entire process of taking your Typescript, HTML, and SCSS files and building them into an application. The configuration for how this is done is held in the following files
+Angular handles the entire process of taking your TypeScript, HTML, and SCSS files and building them into an application. The configuration for how this is done is held in the following files
 
-* `tsconfig.json` holds the primary configuration for the Typescript compiler and dictates how your typescript files are converted into javascript files for browsers to consume.
+* `tsconfig.json` holds the primary configuration for the TypeScript compiler and dictates how your TypeScript files are converted into javascript files for browsers to consume.
 * `tsconfig.app.json` and `tsconfig.spec.json` both extend the primary `tsconfig.json` file to specify which files to compile and where the output should be emitted. One is for the main application and the other is for your specs (tests).
-* `angular.json` is the configuration file that specifies how the Angular CLI should build, test, lint, or serve your application. This file is fairly complex. Take a quick review of it and notice where other files are referenced. A full explanation of this file is out of scope, but you can read the [documentation](https://angular.io/guide/workspace-config) if you're interested in the details.
+* `angular.json` is the configuration file that specifies how the Angular CLI should build, test, lint, or serve your application. This file is fairly complex. Take a quick review of it and notice where other files are referenced. You can read the [documentation](https://angular.io/guide/workspace-config) if you're interested in the complete details of this file.
 
 ### Test configuration
 
-Tests are configured to run though the Jasmine Spec Runner via Karma. this configuration is stored in the `karma.conf.js` file. This file is referenced from the test architect inside the `angular.json` file, where it also points to `src/test.ts` for which test files to run. By default, all files matching `*.spec.ts` are run. You do not need to modify any of these as part of this workshop.
+Tests are configured to run though the [Jasmine Spec Runner](https://jasmine.github.io/pages/getting_started.html) via [Karma](https://karma-runner.github.io/latest/index.html). this configuration is stored in the `karma.conf.js` file. This file is referenced from the test architect inside the `angular.json` file, where it also points to `src/test.ts` for which test files to run. By default, all files matching `*.spec.ts` are run. You do not need to modify any of these as part of this workshop.
 
 ### Additional files
 
@@ -144,7 +152,7 @@ And finally, this brings us to the `/src/app` directory! This is where we'll be 
 
 Let's look at the `app.module.ts` file first because that's where our application is bootstrapped.  
 
-```typescript
+```TypeScript
 // import dependencies from node_modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -153,7 +161,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Angular relies heavily on Typescript decorators (https://www.typescriptlang.org/docs/handbook/decorators.html) to notate modules, components, services, and more. The @NgModule decorator indicates that this class is a module.
+// Angular relies heavily on TypeScript decorators (https://www.TypeScriptlang.org/docs/handbook/decorators.html) to notate modules, components, services, and more. The @NgModule decorator indicates that this class is a module.
 @NgModule({
   // Declares the AppComponent in this module. A component can only be delcared in one module. The compiler will complain otherwise. If a component is needed in another module, that module can import the one it is declared in (bringing in all its dependencies as well).
   declarations: [
@@ -162,7 +170,7 @@ import { AppComponent } from './app.component';
 
   // Defines the dependencies of this module, the objcts it declares, and its providers.
   imports: [
-    BrowserModule, // This application will run in a browser, so this brings in the infrastructure for that. Angular can also be configured for server-side rendering, but that's outside the scope of this workshop.
+    BrowserModule, // This application will run in a browser, so this brings in the infrastructure for that. Angular can alternatively be configured for server-side rendering.
     AppRoutingModule // Brings in the routing module declared in app-routing.module.ts. We'll look at that next.
   ],
   providers: [], // We have no global providers (services). We will create one later in the workshop.
@@ -171,17 +179,17 @@ import { AppComponent } from './app.component';
 export class AppModule { } // Modules are classes. It is possible to put behavior in the class, but for the vast majority of cases they will remain empty.
 ```
 
-And now for the `app-routing.module.ts` file. This is conventionally declared as a separate module, even though its contents could have been directly included in the `app.module.ts` file. As your project grows, you may have many routes, and so separating this out into it's own file increases maintainability.
+And now for the `app-routing.module.ts` file. This is conventionally declared as a separate module, even though its contents could have been directly included in the `app.module.ts` file. As your project grows, you may have many routes, and so separating this out into its own file increases maintainability.
 
-```typescript
+```TypeScript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = []; // this array will define your routes, or pages, in your application. For now it is empty. We will add to it later.
+const routes: Routes = []; // This array will define your routes, or pages, in your application. For now it is empty. We will add to it later.
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], // Bring in the Angular RouterModule as a dependency and tell it that the routes defined above are our root routes. There are also child routes for nested routing, but again, that's outside our scope.
-  exports: [RouterModule] // Eport the RouterModule so that it is brought into any module that imports this module
+  imports: [RouterModule.forRoot(routes)], // Bring in the Angular RouterModule as a dependency and tell it that the routes defined above are our root routes. It is also possible to use child routes for nested routing.
+  exports: [RouterModule] // Export the RouterModule so that it is brought into any module that imports this module.
 })
 export class AppRoutingModule { }
 
@@ -189,21 +197,21 @@ export class AppRoutingModule { }
 
 More detailed information about modules can be found in the [documentation](https://angular.io/guide/architecture-modules).
 
-Finally we arrive at our AppComponent. Components are generally composed of four files: a TypeScript file to declare the component and provide its behavior and logic, an HTML file for the markup, a SCSS file for styles, and a spec file for tests. We will look at the Typescript file in detail. Take a look at the HTML and SCSS files on your own as they are pretty self-explanatory. We're going to disregard the spec for now, but have a look if you're interested.
+Finally we arrive at our AppComponent. Components are generally composed of four files: a TypeScript file to declare the component and provide its behavior and logic, an HTML file for the markup, a SCSS file for styles, and a spec file for tests. We will look at the TypeScript file in detail. Take a look at the HTML and SCSS files on your own as they are pretty self-explanatory. We're going to disregard the spec for now, but have a look if you're interested.
 
-```typescript
+```TypeScript
 import { Component } from '@angular/core';
 
-// the @Component decorator indicates that this class represents a component and allows us to provide required configuration.
+// The @Component decorator indicates that this class represents a component and allows us to provide required configuration.
 @Component({
-  selector: 'app-root', // declares the HTML element that will construct an instance of this component. You can see where it's referenced in index.html inside the body tag
-  templateUrl: './app.component.html', // Tells angular where to find the markup for this component
-  styleUrls: ['./app.component.scss'] // Tells angular where to find the styles for this component
+  selector: 'app-root', // Declares the HTML element that will construct an instance of this component. You can see where it's referenced in index.html inside the body tag
+  templateUrl: './app.component.html', // Configures the path to the markup file for this component.
+  styleUrls: ['./app.component.scss'] // Configures the path(s) to the stylesheets for this component.
 })
 export class AppComponent {
-    // inside the component, you are free to provide whatever variables, functions, etc that you like. Anything that is marked public is accessible on the template.
+    // Inside the component, you are free to provide whatever variables, functions, etc that you like. Anything that is marked public is accessible on the template.
 
-    // this is a public class variable. See if you find where it is referenced in the template to display the app name.
+    // This is a public class variable. See if you find where it is referenced in the template to display the app name.
     title = 'angular-todo-list';
 }
 ```
