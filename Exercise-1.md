@@ -51,7 +51,7 @@ When you're done looking at this page, you can close the browser window/tab and 
 
 ## Build the project
 
-
+It is not always appropriate to serve an application with `ng serve`. To generate the compiled output for hosting the application elsewhere, run `ng build` in your terminal. By default, the output is emitted to the `/dist` directory. Take a look at the files there to see what gets built. These can be copied to a web server to be hosted elsewhere if desired, but we won't be doing that as part of the workshop. We will continue to use `ng serve`. 
 
 ## Execute tests
 
@@ -69,6 +69,8 @@ TOTAL: 3 SUCCESS
 ```
 
 More detail is shown in the browser window as well.
+
+<img src="./exercise-images/tests.png" alt="Image of the tests results in the browser" width="500"/>
 
 Note that the terminal command doesn't complete. While this is running, you can modify both your source files or your specs (tests) and the tests will automatically rerun on save. You can cancel the tests by pressing `ctrl-c` or `cmd-c` in your terminal. The browser window will close automatically. 
 
@@ -116,7 +118,7 @@ There are a few other configuration files provided which control various aspects
 
 * `.vscode` is a directory with a few files in it that configure behavior of VS Code. One to note is `launch.json` which provides shortcuts to a couple of the Angular CLI commands in the `Run and Debug` view of VS Code
 
-    <img src="./exercise-images/launch.png" alt="Image of the project file and folder structure as displayed in VS Code"/>
+    <img src="./exercise-images/launch.png" alt="Image showing where to run commands from launch.json in VS Code"/>
 
 * `.browserslistrc` defines which browsers you would like to support. By choosing to maintain only newer browsers, you can ensure that your generated application files remain smaller so your application can be more performant.
 * `.editorconfig` defines a standard formatting style for files. No more things like mixed spaces and tabs or single and double quotes! This requires the [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) extension to be installed in order for the rules to be applied in VS Code.
