@@ -1,6 +1,2 @@
 theme: jekyll-theme-slate
 title: Angular CLI Workshop
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
