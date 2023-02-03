@@ -8,6 +8,8 @@ During this workshop we will explore the Angular CLI (Command Line Interface) an
 * Share data/state across the application with services
 * Fetch data from a back-end / async stuff??
 
+> **Note:** No prior knowledge of Angular is required. However, some basic knowledge of HTML/CSS/TypeScript would be helpful.
+
 ## Setup
 
 Ahead of this workshop there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training upon.
