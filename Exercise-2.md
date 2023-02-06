@@ -450,9 +450,9 @@ app-todo-list-item + app-todo-list-item {
 }
 ```
 
-Ahh. Much better. Back to the way we were. But wait... Something is still off. Do you see it?
+Ahh. Much better. Back to the way we were. But wait... Something is still off. Do you see it? (check the browser)
 
-When we made the `ListItemComponent` we copied the block of markup that had the Complete button and now the items in our completed list have a button to complete them... again? Let's fix that.
+When we made the `ListItemComponent` we copied the block of markup that had the `Complete` button and now the items in our completed list have a button to complete them... again? Let's fix that.
 
 Add
 ```
@@ -470,6 +470,7 @@ There we go! That was a bit of refactoring work, but look how much cleaner `app.
 
 There's one more obvious component we can extract. This time we're not going to go through the refactoring step-by-step. Right now, `app.component.html` still has two similar blocks of markup that are nearly identical.
 
+`app.component.html`
 ```html
 <h2>Items to do</h2>
 <app-todo-list-item *ngFor="let todo of thingsStillToDo" [todo]="todo"></app-todo-list-item>
@@ -491,7 +492,7 @@ ng generate component item-list
  
  `item-list.html`
  ```html
-<h2>{{title]]}}</h2>
+<h2>{{title}}</h2>
 <app-todo-list-item *ngFor="let todo of items" [todo]="todo"></app-todo-list-item>
 <div *ngIf="items.length ===0">{{emptyMessage}}</div>
  ```
@@ -559,28 +560,11 @@ If you don't like typing all that out, it can be shortened to
 ng g c [component name]
 ```
 
-Breaking your app down into bite-sized pieces that focus on only one thing will make your applications much easier to understand and make it less likely for bugs to be introduced. Generating the components via the CLI takes the tedium out of setting up the necessary boilerplate
+We also learned how to generate a simple model class with
+```
+ng generate class [class name] --type=model 
+```
 
+Breaking your app down into bite-sized pieces that focus on only one thing will make your applications much easier to understand and make it less likely for bugs to be introduced. Generating the components via the CLI takes the tedium out of setting up the necessary boilerplate so you don't have a mental barrier about creating them. Because really, who want's to create those 4 files over and over again?
 
-<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <style>
-            h1 {
-                color: red;
-                animation: mymove 2s infinite;
-            }
-
-            @keyframes mymove {
-                from {
-                    color: red;
-                }
-                to {
-                    color: yellow;
-                }
-            }
-            </style>
-            <h1>HELLO WORLD!</h1>
-        </div>
-    </foreignObject>
-</svg>
+Next, we'll take a look at services and how they can help with state management.
