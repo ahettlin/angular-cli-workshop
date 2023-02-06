@@ -275,7 +275,7 @@ Better already!
 
 ### Extract todo item component
 
-If you take a look at the `app.component.html` file, you will notice some redundant markup that displays the individual items the two lists:
+If you take a look at the `app.component.html` file, you will notice some redundant markup that displays the individual items. The two lists:
 
 ```html
 <div class="todo" *ngFor="let todo of thingsStillToDo">
@@ -294,7 +294,7 @@ and
 </div>
 ```
 
-While not completely identical, these blocks are ideal candidates to be turned into components. Let's do that.
+while not completely identical, they are ideal candidates to be turned into components. Let's do that.
 
 Run
 ```
@@ -546,3 +546,41 @@ export class ItemListComponent {
 <app-item-list [items]="thingsStillToDo" title="Items to do" emptyMessage="Nothing to do!!"></app-item-list>
 <app-item-list [items]="thingsDone" title="Completed Items" emptyMessage="Get to work!"></app-item-list>
 ```
+
+## Conclusion
+
+In this eercise, we saw how easy it is to generate new custom components with the CLI command
+```
+ng generate component [component name]
+```
+
+If you don't like typing all that out, it can be shortened to
+```
+ng g c [component name]
+```
+
+Breaking your app down into bite-sized pieces that focus on only one thing will make your applications much easier to understand and make it less likely for bugs to be introduced. Generating the components via the CLI takes the tedium out of setting up the necessary boilerplate
+
+
+<svg fill="none" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style>
+            h1 {
+                color: red;
+                animation: mymove 2s infinite;
+            }
+
+            @keyframes mymove {
+                from {
+                    color: red;
+                }
+                to {
+                    color: yellow;
+                }
+            }
+            </style>
+            <h1>HELLO WORLD!</h1>
+        </div>
+    </foreignObject>
+</svg>
