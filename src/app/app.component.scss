@@ -1,0 +1,14 @@
+:host {
+  display  : block;
+  max-width: 720px;
+  margin   : auto;
+}
+
+.add-item {
+  display        : flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 10px;
+  }
+}

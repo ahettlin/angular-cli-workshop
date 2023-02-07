@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+app-todo-list-item+app-todo-list-item {
+  margin-top : 10px;
+  padding-top: 10px;
+  border-top : 1px solid gray;
+}
