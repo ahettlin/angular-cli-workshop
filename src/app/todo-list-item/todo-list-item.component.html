@@ -1,4 +1,4 @@
 <span>
-  {{todo.actionDate | date : 'medium'}} - <strong>{{todo.task}}</strong>
+  {{(todo.completedOn ?? todo.createdOn) | date : 'medium'}} - <strong>{{todo.task}}</strong>
 </span>
-<button type="button" (click)="todo.complete()" *ngIf="!todo.isComplete">Complete</button>
+<button type="button" (click)="todoService.complete(todo)" *ngIf="!todoService.isComplete(todo)">Complete</button>
