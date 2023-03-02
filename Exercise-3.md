@@ -132,7 +132,7 @@ import { TodoItem } from './todo-item.model';
 export class TodoService {
 
   // This would be a call to your back-end to get the list of items,
-  // possibly on construction of this service, or as a function call to fetch on demand.
+  // possibly on construction of this service, or as a method to fetch on demand.
   private todos: TodoItem[] = [{
     id: 1,
     task: 'Learn about Angular',
@@ -160,7 +160,7 @@ export class TodoService {
 
   public add(task: string) {
     if (task) {
-      // This would typically be a call to the back-end to create the new entity and return the object with an ID
+      // This would typically be a call to the back-end to create the new entity and return the object with an ID.
       // For now, we'll just compute the next highest ID and use that.
       const nextId = this.todos.reduce((max, todo) => Math.max(max, todo.id), 0) + 1;
       this.todos.push({
@@ -177,7 +177,7 @@ export class TodoService {
   }
 
   public complete(todo: TodoItem) {
-    // This would typically be a call to the back-end to update the entity and return the object with the updated date
+    // This would typically be a call to the back-end to update the entity and return the object with the updated date.
     todo.completedOn = new Date().getTime();
   }
 }
