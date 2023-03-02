@@ -52,6 +52,8 @@ Ahead of this workshop there is a small amount of setup required to install the 
       @schematics/angular          14.1.1 (cli-only)
       ```
 
-That's it! There is no code to check out since we will be starting from scratch.
+That's it!
+
+Since the application is going to be written from scratch, you can either follow the exercise instructions here on github, or you can clone the repository into a local directory so you can have the instructions open in your editor as you follow along. We would recommend cloning the repository. That way, if you fall behind during the workshop, you can quickly switch branches to catch back up. Each exercise branch has the result from the previous exercise.
 
 **Please contact your trainer if you have any issues during the setup process.**
