@@ -3,3 +3,12 @@
   justify-content: space-between;
   align-items    : center;
 }
+
+a {
+  flex-grow: 1;
+  padding  : 10px 0;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}

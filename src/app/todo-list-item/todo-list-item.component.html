@@ -1,4 +1,4 @@
-<span>
+<a [routerLink]="['details', todo.id]">
   {{(todo.completedOn ?? todo.createdOn) | date : 'medium'}} - <strong>{{todo.task}}</strong>
-</span>
+</a>
 <button type="button" (click)="todoService.complete(todo)" *ngIf="!todoService.isComplete(todo)">Complete</button>

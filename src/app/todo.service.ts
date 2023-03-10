@@ -55,4 +55,23 @@ export class TodoService {
     // This would typically be a call to the back-end to update the entity and return the object with the updated date
     todo.completedOn = new Date().getTime();
   }
+
+  public get(id: number): TodoItem | undefined {
+    // This would typically be a call to the back-end to fetch the entity
+    // For now, we'll just find the item in the array
+    return this.todos.find(todo => todo.id === id);
+  }
+
+  public markIncomplete(todo: TodoItem) {
+    // This would typically be a call to the back-end to update the entity and return the object with the updated date
+    todo.completedOn = null;
+  }
+
+  public delete(item: TodoItem) {
+    // This would typically be a call to the back-end to delete the entity
+    const index = this.todos.indexOf(item);
+    if (index > -1) {
+      this.todos.splice(index, 1);
+    }
+  }
 }

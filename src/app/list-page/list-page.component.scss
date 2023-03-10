@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+.add-item {
+  display        : flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="add-item">
+  <input [(ngModel)]="itemToAdd" placeholder="Something new to do">
+  <button type="button" (click)="add()">Add</button>
+</div>
+
+<app-item-list [items]="todoService.thingsStillToDo" title="Items to do" emptyMessage="Nothing to do!!"></app-item-list>
+<app-item-list [items]="todoService.thingsDone" title="Completed Items" emptyMessage="Get to work!"></app-item-list>

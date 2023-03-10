@@ -1,0 +1,13 @@
+<ng-container *ngIf="item">
+  <h2>{{item.task}}</h2>
+  <dl>
+    <dt>Created on</dt>
+    <dd>{{item.createdOn | date : 'medium'}}</dd>
+    <dt>Completed on</dt>
+    <dd>{{isComplete ? (item.completedOn | date : 'medium') : 'Incomplete'}}</dd>
+  </dl>
+
+  <button type="button" (click)="toggleComplete()">Mark {{isComplete ? 'inc' : 'c'}}omplete</button>
+  <button type="button" (click)="delete()">Delete</button>
+  <a routerLink="/">Back to list</a>
+</ng-container>
