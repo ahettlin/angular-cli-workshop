@@ -216,4 +216,4 @@ export class TodoListItemComponent {
 
 ## Conclusion
 
-We have now isolated our state management and business logic in a service that is shared across the application. It has also given us a single place for any related HTTP calls if this were an application with a back-end.
+We have now isolated our state management and business logic in a service that is shared across the application. It has also given us a single place for any related HTTP calls if this were an application with a back-end. Centralizing business logic is essential for consistency and reducing potential for introducing bugs as requirements change.

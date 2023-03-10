@@ -163,9 +163,9 @@ This is a very simple and contrived example, but it illustrates the power of com
 
 ## A short detour
 
-Before we start extracting components, there is one setting change to make in the `angular.json` file that will simplify things for us later on. Browsers render custom elements with `display: inline`. More often than not, we would like them to be `display: block`. Let's make sure that when the CLI generates components for us, that it adds a bit of CSS to make that happen.
+Before we start extracting components, there is one setting change to make in the `angular.json` file that will simplify things for us later on. Browsers render custom elements with `display: inline` by default. More often than not, we would like them to be `display: block`. Let's make sure that when the CLI generates components for us, that it adds a bit of CSS to make that happen.
 
-In `angular.json` modify the following section near the top of the file
+In `angular.json`, modify the following section near the top of the file
 ```json
 "@schematics/angular:component": {
   "style": "scss"
@@ -550,7 +550,7 @@ export class ItemListComponent {
 
 ## Conclusion
 
-In this eercise, we saw how easy it is to generate new custom components with the CLI command
+In this exercise, we saw how easy it is to generate new custom components with the CLI command
 ```
 ng generate component [component name]
 ```
