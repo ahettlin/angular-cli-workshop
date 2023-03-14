@@ -6,7 +6,8 @@ During this workshop we will explore the Angular CLI (Command Line Interface) an
 * Create reusable components
 * Share data/state across the application with services
 * Route between multiple "pages"
-* Fetch data from a back-end / async stuff??
+* Lint code
+* Update dependencies
 
 > **Note:** No prior knowledge of Angular is required. However, some basic knowledge of HTML/CSS/TypeScript would be helpful.
 
