@@ -13,7 +13,7 @@ During this workshop we will explore the Angular CLI (Command Line Interface) an
 
 ## Setup
 
-Ahead of this workshop there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training upon.
+Ahead of this workshop there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training on.
 
 1. [Install](https://zoom.us/download) or [update Zoom](https://support.zoom.us/hc/en-us/articles/201362233-Upgrade-update-to-the-latest-version) if you plan on attending remotely.
 1. Please download, install, and configure the following tools:
