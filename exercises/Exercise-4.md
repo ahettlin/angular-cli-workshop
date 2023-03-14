@@ -32,7 +32,7 @@ Run
 ng g c list-page --skip-selector=true  
 ```
 
-This is just a standard component. The `--skip-selector` option tells the CLI to not define an element selector on the generated component. We don't need a selector because this component will never be used inside the template of another component. This is generally the case for all components that are used as routes.
+This is just a standard component like we created in exercise 2. The `--skip-selector` option tells the CLI to not define an element selector on the generated component. We don't need a selector because this component will never be used inside the template of another component. This is generally the case for all components that are used as routes.
 
 Unfortunately, the CLI does not currently have an option to automatically update our route definitions when creating a component. We have to do that manually.
 
@@ -48,7 +48,7 @@ const routes: Routes = [
 ...
 ```
 
-This defines the `ListPageComponent` as the component that will be displayed when requesting the root of the application (`''`). The `**` path defines a redirect that matches anything that doesn't match anything else in the list of routes, and redirects back to the root. That way, if an invalid path is requested, you will see the `ListPageComponent` instead of nothing. Instead of a redirect, you could display a "PageNotFound" component here if you wanted.
+This defines the `ListPageComponent` as the component that will be displayed when requesting the root of the application (`''`). The `**` path defines a route that matches anything that doesn't match anything else in the list of routes, and redirects back to the root. That way, if an invalid path is requested, you will see the `ListPageComponent` instead of nothing. Instead of a redirect, you could display a "PageNotFound" component here if you wanted.
 
 If you aren't running `ng serve`, sart it up and check your browser. You should see "list-page works!" at the bottom of the page.
 
