@@ -50,13 +50,13 @@ const routes: Routes = [
 
 This defines the `ListPageComponent` as the component that will be displayed when requesting the root of the application (`''`). The `**` path defines a route that matches anything that doesn't match anything else in the list of routes, and redirects back to the root. That way, if an invalid path is requested, you will see the `ListPageComponent` instead of nothing. Instead of a redirect, you could display a "PageNotFound" component here if you wanted.
 
-If you aren't running `ng serve`, sart it up and check your browser. You should see "list-page works!" at the bottom of the page.
+If you aren't running `ng serve`, start it up and check your browser. You should see "list-page works!" at the bottom of the page.
 
 ## Move content into the list page
 
-Move all of the content between the `<hr />` and `<router-outlet>` in `app.component.html` to `list-page.component.html`, replacing the contents that are already there.
+Move all of the content between the `<hr />` and `<router-outlet>` in `app.component.html` to `list-page.component.html`, replacing the content that is already there.
 
-The final results should look like this
+The final results should look like this:
 
 `app.component.html`
 ```html
@@ -182,7 +182,7 @@ We now have a path with a special syntax.  When a path contains a segment that s
 
 In order to get to the detail page, we have to have a link that points to that route. You can't expect people to memorize the ids of their todo items, now can you? 
 
-Change the span around the text in `TodoListItemComponent` to a link to the detail page:
+Change the `span` around the text in `TodoListItemComponent` to a link to the detail page:
 
 `todo-list-item.component.html`
 ```html

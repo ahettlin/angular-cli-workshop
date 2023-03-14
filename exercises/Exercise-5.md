@@ -21,16 +21,16 @@ For example:
 Would you like to add ESLint now? (Y/n) 
 ```
 
-It seems like this will do what you want if you answer `Yes`, but unfortunately there appears to be a bug where the wrong version of `@angular-eslint/schematics` is attempted to be installed. Let's do it manually. Respond with `n` to terminate the plugin installation.
+It seems like this will do what you want if you answer `Yes`, but unfortunately there appears to be a bug where the wrong version of `@angular-eslint/schematics` is attempted to be installed. Let's do it manually. Respond with `n` to terminate the package installation.
 
-> **Note:** For the next command you will need to specify the version of Angular that you have installed. You can check which version you have by running `ng version` if you recall from the pre-workshop setup. Replace the `14` in the command below with the major version of Angular that you have installed. Otherwise, you will have dependency errors.
+> **Note**: For the next command you will need to specify the version of Angular that you have installed. You can check which version you have by running `ng version` if you recall from the pre-workshop setup. Replace the `14` in the command below with the major version of Angular that you have installed. Otherwise, you will have dependency errors.
 
 Run
 ```
 ng add @angular-eslint/schematics@14
 ```
 
-Once the command is complete, you will notice that your `package.json` file has been updated with a handful of depenencies and a new script, the `angular.json` file has been updated with configuration for linting, and a new `.eslintrc.json` file has been created to configure the rules you want to apply. Angular provides a default set of rules, but you can [configure your own](https://eslint.org/docs/latest/rules/).
+Once the command is complete, you will notice that your `package.json` file has been updated with a handful of depenencies and a new script, the `angular.json` file has been updated with configuration for linting, and a new `.eslintrc.json` file has been created to configure the rules you want to apply. Angular provides a default set of rules, but you can also [configure your own](https://eslint.org/docs/latest/use/configure/configuration-files) [rules](https://eslint.org/docs/latest/rules/).
 
 A side effect of this process is that we get to see a new CLI command `ng add`. This is a helpful tool for adding dependencies to the project. You don't *have* to use it to add dependencies, but it can make things easier.
 
@@ -59,7 +59,7 @@ The `ng update` command provides a convenient way to update packages to their mo
 
 The syntax is: `ng update [list of package names]`. By default, it will update to the latest stable version. You can use the `--next` option to install beta or pre-releast versions.
 
-As an example of upgrading to the latest patch version of Angular 15 ([or look for an even newer version here](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
+As an example of upgrading to the latest patch version of Angular 15 ([or look here to see if a newer version is available](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
 ```
 ng update @angular/cli@^15 @angular/core@^15
 ```
@@ -81,7 +81,7 @@ ng update @angular/cli@^15 @angular/core@^15 --force
 
 When the update is complete, you should see several changes in your `package.json` file. If you made a jump in the major version, you might also see code changes. There are logs in the console describing all the changes that were made, if any. This is similar to using `ng add` in that packages updated with this command can perform additional actions so that you don't manually have to refactor your code in case the package deprecates or removes APIs.
 
-This particular command we just ran only updated the core Angular dependencies. It is up to you to also upgrade any other dependencies you feel you should update (i.e. 3<sup>rd</sup> party packages).
+This particular command we just ran only updated the core Angular dependencies. It is up to you to also upgrade any other dependencies you feel you should update (i.e. ESLint that we ignored above, or 3<sup>rd</sup> party packages).
 
 Your project should still build and run just fine with `ng serve` as long as there were no breaking changes that need fixed.
 
@@ -106,7 +106,7 @@ It's not much, but it can save a few seconds here and there, which can add up if
 
 We now have a fully working Angular application that makes use of components to reduce redundancy and encapsulate behavior, shares state through a service, has routing for multiple pages, and conforms to coding stylistic standards.
 
-Hopefully it is clear how much work the Angular CLI does for you to make the barriers for starting a new project or enhancing an existing one quite low. There are many more things the Angular CLI is capable of that we didn't explore in this workshop that make it even more powerful.
+Hopefully it is clear how much work the Angular CLI does for you to make the barriers for starting a new project or enhancing an existing one quite low. There are more things the Angular CLI is capable of that we didn't explore in this workshop that make it even more powerful.
 
 ### Bonus
 
@@ -125,6 +125,9 @@ ng new [application name]
 
 ng serve
 (ng s)
+
+ng build
+(ng b)
 
 ng test
 (ng t)

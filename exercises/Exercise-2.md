@@ -1,6 +1,6 @@
 # Angular CLI Workshop Exercise 2 - Components
 
-Now that we have all of the application setup out of the way, we can start the real work of creating our application. Because this workshop is about the Angular CLI and not learning Angular itself, there will not be any formal explanation of how the code functions. However, feel free to ask questions if time permits.
+Now that we have all of the application setup out of the way, we can start the real work of creating our application. Because this workshop is about the Angular CLI and not learning Angular itself, there will not be much formal explanation of how the code functions. However, feel free to ask questions as time permits.
 
 ## Create the initial todo list application
 
@@ -163,7 +163,7 @@ This is a very simple and contrived example, but it illustrates the power of com
 
 ## A short detour
 
-Before we start extracting components, there is one setting change to make in the `angular.json` file that will simplify things for us later on. Browsers render custom elements with `display: inline` by default. More often than not, we would like them to be `display: block`. Let's make sure that when the CLI generates components for us, that it adds a bit of CSS to make that happen.
+Before we start extracting components, there is one setting change to make in the `angular.json` file that will simplify things for us later on. Browsers render custom elements as `display: inline` by default. More often than not, we would like them to be `display: block`. Let's make sure that when the CLI generates components for us, that it adds a bit of CSS to make that happen.
 
 In `angular.json`, modify the following section near the top of the file
 ```json
@@ -202,7 +202,7 @@ Run
 ng generate class todo-item --type=model --skip-tests
 ```
 
-You should see a new file created called `todo-item.model.ts`. Move the contents of that class from `app.component.ts` to the new file. You also need to export the class to make it available elsewhere It should look like this:
+You should see a new file created called `todo-item.model.ts`. Move the contents of that class from `app.component.ts` to the new file. You also need to export the class to make it available elsewhere. It should look like this:
 
 ```typescript
 export class TodoItem {
@@ -294,7 +294,7 @@ and
 </div>
 ```
 
-while not completely identical, they are ideal candidates to be turned into components. Let's do that.
+while not completely identical, are ideal candidates to be turned into components. Let's do that.
 
 Run
 ```
@@ -361,7 +361,7 @@ This should leave you with:
 <div *ngIf="thingsDone.length ===0">Get to work!</div>
 ```
 
-We now no longer have any reference to that `.todo` css class in this file. Those stiles now belong in `todo-list-item.component.scss`. Move the block for that CSS class from `app.component.scss` to `todo-list-item.component.scss` so that you have
+We now no longer have any reference to that `.todo` CSS class in this file. Those styles now belong in `todo-list-item.component.scss`. Move the block for that CSS class from `app.component.scss` to `todo-list-item.component.scss` so that you have
 
 `app.component.scss`
 ```scss
@@ -474,11 +474,11 @@ There's one more obvious component we can extract. This time we're not going to 
 ```html
 <h2>Items to do</h2>
 <app-todo-list-item *ngFor="let todo of thingsStillToDo" [todo]="todo"></app-todo-list-item>
-<div *ngIf="thingsStillToDo.length ===0">Nothing to do!!</div>
+<div *ngIf="thingsStillToDo.length === 0">Nothing to do!!</div>
 
 <h2>Completed Items</h2>
 <app-todo-list-item *ngFor="let todo of thingsDone" [todo]="todo"></app-todo-list-item>
-<div *ngIf="thingsDone.length ===0">Get to work!</div>
+<div *ngIf="thingsDone.length === 0">Get to work!</div>
 ```
 
  Lets make them into components.
@@ -494,7 +494,7 @@ ng generate component item-list
  ```html
 <h2>{{title}}</h2>
 <app-todo-list-item *ngFor="let todo of items" [todo]="todo"></app-todo-list-item>
-<div *ngIf="items.length ===0">{{emptyMessage}}</div>
+<div *ngIf="items.length === 0">{{emptyMessage}}</div>
  ```
 
 `item-list.scss`
@@ -503,7 +503,7 @@ ng generate component item-list
   display: block;
 }
 
-app-todo-list-item+app-todo-list-item {
+app-todo-list-item + app-todo-list-item {
   margin-top : 10px;
   padding-top: 10px;
   border-top : 1px solid gray;
@@ -547,6 +547,8 @@ export class ItemListComponent {
 <app-item-list [items]="thingsStillToDo" title="Items to do" emptyMessage="Nothing to do!!"></app-item-list>
 <app-item-list [items]="thingsDone" title="Completed Items" emptyMessage="Get to work!"></app-item-list>
 ```
+
+After saving, you should see that the application looks and functions like it did before our refactors. The difference is that the code is already much more manageable just by creating a couple components.
 
 ## Conclusion
 

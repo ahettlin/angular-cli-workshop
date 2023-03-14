@@ -108,8 +108,6 @@ This project uses [NPM](https://docs.npmjs.com/about-npm) for dependency managem
 * `package-lock.json` stores the eact versions of all dependencies that were installed the last time `npm install` was run. `npm install` was run automatically for you as part of the `ng new` command you ran earlier, which is why this file exists. You should never manually edit this file. It is to maintain consistency in the build when building in a `CI/CD` environment, or between multiple developers working on the same project.
 * `node_modules` is the directory where all of the dependencies are stored. It can become very large. It is not committed to the repository and should already be ignored (In VS Code, you can tell a file is ignored from the repository because it is colored gray in the Explorer sidebar). You should not have to interact with the contents of this folder directly.
 
-Adding new dependencies is outside the scope of this workshop, so we will not go over the steps to do so.
-
 ### Build configuration
 
 Angular handles the entire process of taking your TypeScript, HTML, and SCSS files and building them into an application. The configuration for how this is done is held in the following files
@@ -130,7 +128,7 @@ There are a few other configuration files provided which control various aspects
 
     <img src="./exercise-images/launch.png" alt="Image showing where to run commands from launch.json in VS Code"/>
 
-* `.browserslistrc` defines which browsers you would like to support. By choosing to maintain only newer browsers, you can ensure that your generated application files remain smaller so your application can be more performant.
+* `.browserslistrc` defines which browsers you would like to support. By choosing to maintain support for only newer browsers, you can ensure that your generated application files remain smaller so your application can be more performant.
 * `.editorconfig` defines a standard formatting style for files. No more things like mixed spaces and tabs or single and double quotes! This requires the [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) extension to be installed in order for the rules to be applied in VS Code.
 * `.gitignore` lists all the files and directories that should not be committed to the repository. Some helpful defaults have been pre-populated.
 * `README.md` provides a starting point describing the applicaiton and some helpful CLI commands. Customize this as necessary for your application.
@@ -161,22 +159,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Angular relies heavily on TypeScript decorators (https://www.TypeScriptlang.org/docs/handbook/decorators.html) to notate modules, components, services, and more. The @NgModule decorator indicates that this class is a module.
+// Angular relies heavily on TypeScript decorators (https://www.TypeScriptlang.org/docs/handbook/decorators.html)
+// to notate modules, components, services, and more.
+// The @NgModule decorator indicates that this class is a module.
 @NgModule({
-  // Declares the AppComponent in this module. A component can only be delcared in one module. The compiler will complain otherwise. If a component is needed in another module, that module can import the one it is declared in (bringing in all its dependencies as well).
+  // Declares the AppComponent in this module. A component can only be delcared in one module.
+  // The compiler will complain otherwise. If a component is needed in another module,
+  // that module can import the one it is declared in (bringing in all its dependencies as well).
   declarations: [
     AppComponent
   ],
 
   // Defines the dependencies of this module, the objcts it declares, and its providers.
   imports: [
-    BrowserModule, // This application will run in a browser, so this brings in the infrastructure for that. Angular can alternatively be configured for server-side rendering.
-    AppRoutingModule // Brings in the routing module declared in app-routing.module.ts. We'll look at that next.
+	// This application will run in a browser, so this brings in the infrastructure for that.
+	// Angular can alternatively be configured for server-side rendering.
+    BrowserModule, 
+
+    // Brings in the routing module declared in app-routing.module.ts. We'll look at that next.
+    AppRoutingModule 
   ],
   providers: [], // We have no global providers (services). We will create one later in the workshop.
-  bootstrap: [AppComponent] // Tell Angular that AppComponent is the entry-point to our Angular application. You should only have one bootstrap declaration in your application.
+
+  // Tell Angular that AppComponent is the entry-point to our Angular application.
+  // You should only have one bootstrap declaration in your application.
+  bootstrap: [AppComponent]
 })
-export class AppModule { } // Modules are classes. It is possible to put behavior in the class, but for the vast majority of cases they will remain empty.
+export class AppModule {
+  // Modules are classes. It is possible to put behavior in the class, but for the vast majority of cases they will remain empty.
+} 
 ```
 
 And now for the `app-routing.module.ts` file. This is conventionally declared as a separate module, even though its contents could have been directly included in the `app.module.ts` file. As your project grows, you may have many routes, and so separating this out into its own file increases maintainability.
@@ -185,11 +196,17 @@ And now for the `app-routing.module.ts` file. This is conventionally declared as
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = []; // This array will define your routes, or pages, in your application. For now it is empty. We will add to it later.
+// This array will define your routes, or pages, in your application.
+// For now it is empty. We will add to it later.
+const routes: Routes = []; 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)], // Bring in the Angular RouterModule as a dependency and tell it that the routes defined above are our root routes. It is also possible to use child routes for nested routing.
-  exports: [RouterModule] // Export the RouterModule so that it is brought into any module that imports this module.
+  // Bring in the Angular RouterModule as a dependency and tell it that the routes defined above are our root routes.
+  // It is also possible to use child routes for nested routing.
+  imports: [RouterModule.forRoot(routes)], 
+  
+  // Export the RouterModule so that it is brought into any module that imports this module.
+  exports: [RouterModule] 
 })
 export class AppRoutingModule { }
 
@@ -204,19 +221,24 @@ import { Component } from '@angular/core';
 
 // The @Component decorator indicates that this class represents a component and allows us to provide required configuration.
 @Component({
-  selector: 'app-root', // Declares the HTML element that will construct an instance of this component. You can see where it's referenced in index.html inside the body tag
+  // Declares the HTML element that will construct an instance of this component.
+  // You can see where it's referenced in index.html inside the body tag
+  selector: 'app-root', 
+
   templateUrl: './app.component.html', // Configures the path to the markup file for this component.
   styleUrls: ['./app.component.scss'] // Configures the path(s) to the stylesheets for this component.
 })
 export class AppComponent {
-    // Inside the component, you are free to provide whatever variables, functions, etc that you like. Anything that is marked public is accessible on the template.
+    // Inside the component, you are free to provide whatever variables, functions, etc that you like.
+	// Anything that is marked public is accessible on the template.
 
-    // This is a public class variable. See if you find where it is referenced in the template to display the app name.
+    // This is a public class variable (variables without visibility declarations are public by default).
+	// See if you find where it is referenced in the template to display the app name.
     title = 'angular-todo-list';
 }
 ```
 
-> **A note on naming conventions**: Angular has a set of [naming conventions](https://angular.io/guide/styleguide#symbols-and-file-names) that the CLI uses when creating new source files. It is recommended that you follow the same conventions when manually creating files yourself. For this workshop, we will be utilizing the CLI as much as possible, so this shouldn't be much of a concern.
+> **A note on naming conventions**: Angular has a set of [naming conventions](https://angular.io/guide/styleguide#symbols-and-file-names) that the CLI uses when creating new source files. It is recommended that you follow the same conventions when manually creating files yourself. For this workshop, we will be utilizing the CLI as much as possible, so this shouldn't be a concern.
 
 ## Conclusion
 
