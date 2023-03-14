@@ -30,22 +30,18 @@ Run
 ng add @angular-eslint/schematics@14
 ```
 
-Once the command is complete, you will notice that your `package.json` file has been updated with a handful of depenencies as well as a new script, the `angular.json` file has been updated with configuration for linting, and a new `.eslintrc.json` file has been created to configure the rules you want to apply.
+Once the command is complete, you will notice that your `package.json` file has been updated with a handful of depenencies and a new script, the `angular.json` file has been updated with configuration for linting, and a new `.eslintrc.json` file has been created to configure the rules you want to apply. Angular provides a default set of rules, but you can [configure your own](https://eslint.org/docs/latest/rules/).
 
-A side effect of this process is that we get to see a new CLI command `ng add`. This is a helpful tool for adding dependencies to the project. You don't have to use it to add dependencies, but it can make things easier.
+A side effect of this process is that we get to see a new CLI command `ng add`. This is a helpful tool for adding dependencies to the project. You don't *have* to use it to add dependencies, but it can make things easier.
 
 > **Why `ng add` and not `npm install`?** They both achieve the goal of adding dependiencies to your project, but with one noteable difference. While `npm install` will install the specified package and update your `package.json` file, `ng add` goes a step further and can perform project configuration and install additional dependencies if the package specifies any. If you were wondering about the term "schematics" from above, that's how Angular packages define these extra installation steps, in something called a "schematic". If you don't know whether the package you're installing has a schematic or not, it's best to stick with `ng add`.
 
-Now, try run the linting process again.
+Now, try running the linting process again.
 ```
 ng lint
 ```
 
-You will either see
-```
-All files pass linting.
-```
-if everything looks good, or a message like
+If everything looks good, you will see `All files pass linting.` If not, you will get a message like:
 ```
 [...]\src\app\todo-list-item\todo-list-item.component.ts
   6:13  error  The selector should be kebab-case (https://angular.io/guide/styleguide#style-05-02)  @angular-eslint/component-selector
@@ -54,7 +50,8 @@ if everything looks good, or a message like
 
 Lint errors found in the listed files.
 ```
-if you have an error that needs correcting.
+
+Correct the issues and try again.
 
 ## Updating packages
 
@@ -62,7 +59,7 @@ The `ng update` command provides a convenient way to update packages to their mo
 
 The syntax is: `ng update [list of package names]`. By default, it will update to the latest stable version. You can use the `--next` option to install beta or pre-releast versions.
 
-As an example of upgrading to the latest patch version of Angular 15 ([or to check for a newer version here](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
+As an example of upgrading to the latest patch version of Angular 15 ([or look for an even newer version here](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
 ```
 ng update @angular/cli@^15 @angular/core@^15
 ```
@@ -82,7 +79,9 @@ This specific message is saying that the `@angular-eslint/schematics` package th
 ng update @angular/cli@^15 @angular/core@^15 --force   
 ```
 
-When the update is complete, you should see several changes in your `package.json` file. If you made a jump in the major version, you might also see code changes. You should see logs in the console describing all the changes that were made, if any. This particular command only updated the core Angular dependencies. It is up to you to also upgrade any other dependencies you feel you should update (i.e. 3<sup>rd</sup>-party packages).
+When the update is complete, you should see several changes in your `package.json` file. If you made a jump in the major version, you might also see code changes. There are logs in the console describing all the changes that were made, if any. This is similar to using `ng add` in that packages updated with this command can perform additional actions so that you don't manually have to refactor your code in case the package deprecates or removes APIs.
+
+This particular command we just ran only updated the core Angular dependencies. It is up to you to also upgrade any other dependencies you feel you should update (i.e. 3<sup>rd</sup> party packages).
 
 Your project should still build and run just fine with `ng serve` as long as there were no breaking changes that need fixed.
 
