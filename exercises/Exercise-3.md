@@ -214,6 +214,18 @@ export class TodoListItemComponent {
 <button type="button" (click)="todoService.complete(todo)" *ngIf="!todoService.isComplete(todo)">Complete</button>
 ```
 
+With these refactors, the application should continue to work as before, but it is now more representative of a real-life web application.
+
 ## Conclusion
 
-We have now isolated our state management and business logic in a service that is shared across the application. It has also given us a single place for any related HTTP calls if this were an application with a back-end.
+In this exercise, learned how to generate a shared service with business logic with the command
+```
+ng generate service [service name]
+```
+
+It also has a shorthand version of
+```
+ng g s [service name]
+```
+
+We have now isolated our state management and business logic in a service that is shared across the application. It has also given us a single place for any related HTTP calls if this were an application with a back-end. Centralizing business logic is essential for consistency and reducing potential for introducing bugs as requirements change.
