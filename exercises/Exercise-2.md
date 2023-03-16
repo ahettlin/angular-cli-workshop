@@ -154,8 +154,8 @@ Open your browser to http://localhost:4200/ and you should see a functional, alb
 
 Looking at the code, there are a handful of areas where it can be cleaned up: remove redundancies, improve separation of concerns, etc. Some examples:
 
-* Redunant markup for the two lists of items
-* Rdundant markup for the items in the lists
+* Redundant markup for the two lists of items
+* Redundant markup for the items in the lists
 * AppComponent is managing more state than necessary
 * More than one class defined in app.component.ts
 
