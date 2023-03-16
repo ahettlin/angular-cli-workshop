@@ -460,7 +460,7 @@ Add
 ```
 to the button in `todo-list-item.component.ts` so that it looks like
 
-```
+```html
 <button type="button" (click)="todo.complete()" *ngIf="!todo.isComplete">Complete</button>
 ```
 
@@ -490,14 +490,14 @@ ng generate component item-list
 
  Modify the new component files to match the following:
  
- `item-list.html`
+ `item-list.component.html`
  ```html
 <h2>{{title}}</h2>
 <app-todo-list-item *ngFor="let todo of items" [todo]="todo"></app-todo-list-item>
 <div *ngIf="items.length === 0">{{emptyMessage}}</div>
  ```
 
-`item-list.scss`
+`item-list.component.scss`
  ```scss
 :host {
   display: block;
@@ -510,7 +510,7 @@ app-todo-list-item + app-todo-list-item {
 }
  ```
 
- `item-list.ts`
+ `item-list.component.ts`
  ```typescript
 import { Component, Input } from '@angular/core';
 import { TodoItem } from '../todo-item.model';
