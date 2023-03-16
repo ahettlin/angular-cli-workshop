@@ -2,7 +2,7 @@
 
 In this exercise, we will generate a new project and explore everything that the Angular CLI gives us to start with. It takes care of a lot of boilerplate setup so that you can dive right into working on the important parts of your app and not get bogged down in setup and configuration.
 
-It's not necessary, but in order to make catching up easier if you get behind in the workshop, clone [this repository](https://github.com/ahettlin/angular-cli-workshop.git) into a directory on your machine, and then switch to the `exercise-1` branch. The branch should be nearly empty aside from the exercise instructions. All terminal commands should be run from the directory you cloned the repository into, unless specified otherwise.
+It's not necessary, but in order to make catching up easier if you get behind in the workshop, clone [this repository](https://github.com/ahettlin/angular-cli-workshop.git) into a directory on your machine, and then switch to the `exercise-1` branch. The branch should be nearly empty. All terminal commands should be run from the directory you cloned the repository into, unless specified otherwise.
 
 ## Generate the application
 
