@@ -154,8 +154,8 @@ Open your browser to http://localhost:4200/ and you should see a functional, alb
 
 Looking at the code, there are a handful of areas where it can be cleaned up: remove redundancies, improve separation of concerns, etc. Some examples:
 
-* Redunant markup for the two lists of items
-* Rdundant markup for the items in the lists
+* Redundant markup for the two lists of items
+* Redundant markup for the items in the lists
 * AppComponent is managing more state than necessary
 * More than one class defined in app.component.ts
 
@@ -398,7 +398,7 @@ We now no longer have any reference to that `.todo` CSS class in this file. Thos
 
 After all these changes, you may have noticed that the application is no longer building. That's because we moved markup that references a `todo` variable into the template for our new `TodoListItem` component, and no `todo` variable exists within that component. Lets create one and pass the data in.
 
-Above the constructor in `todo-list-item.component.ts`, add the following, making sure to add the necessary imports:
+Above the constructor in `todo-list-item.component.ts`, add the following, making sure to add the necessary imports. (If you installed v15 of the CLI, there won't be any default constructor):
 ```typescript
   @Input()
   public todo!: TodoItem;
