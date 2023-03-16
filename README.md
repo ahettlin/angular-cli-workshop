@@ -23,7 +23,7 @@ Ahead of this workshop there is a small amount of setup required to install the 
     * Your preferred text editor. Any basic editor will work, but we would highly recommend [Visual Studio Code](https://code.visualstudio.com/) to make things much easier.
 		* VS Code integrates both the terminal and Git client, and has shortcuts for debugging and testing for convenience.
 		* You can optionally install the `Angular Language Service` extension for VS Code to provide some helpful shortcuts and extra compilation error messages. (To install, select Extensions on the left-hand sidebar, which looks like four squares with one broken away, and then search for the extenstion at the top. Select it and click the Install button.)
-1. In your terminal, run `npm install -g @angular/cli` to install the Angular CLI. This will make the `ng` command globally available. It's what will to most of the magic for us later.
+1. In your terminal, run `npm install -g @angular/cli` to install the Angular CLI. This will make the `ng` command globally available. It's what will do most of the magic for us later.
 1. Please run `ng version` in your terminal to verify everything is installed and configured appropriately. You should have `Angular CLI` version 14 or newer, `Node` version 16.16.0 or newer, and NPM (`Package Manager`) version 8.11.0 or newer:
 
       ```
