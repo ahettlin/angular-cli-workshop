@@ -51,7 +51,7 @@ You should see a sample page with some links to Angular documentation and some b
 
 <img src="./exercise-images/serve.png" alt="Image of the generated application running in a browser" width="500"/>
 
-When you're done looking at this page, you can close the browser window/tab and then cancel the `ng serve` command by pressing `ctrl-c` in your terminal if you're on Windows, or `cmd-c` if you're on OSX.
+When you're done looking at this page, you can close the browser window/tab and then cancel the `ng serve` command by pressing `ctrl+c` in your terminal.
 
 ## Build the project
 
@@ -82,7 +82,7 @@ More detail is shown in the browser window as well.
 
 <img src="./exercise-images/tests.png" alt="Image of the tests results in the browser" width="500"/>
 
-Note that the terminal command continues to run. While this is running, you can modify both your source files or your specs (tests) and the tests will automatically rerun on save. You can cancel the tests by pressing `ctrl-c` or `cmd-c` in your terminal. The browser window will close automatically. 
+Note that the terminal command continues to run. While this is running, you can modify both your source files or your specs (tests) and the tests will automatically rerun on save. You can cancel the tests by pressing `ctrl+c` in your terminal. The browser window will close automatically. 
 
 You can also generate a code coverage report by running the command with the `--code-coverage` option. This will generate an HTML report inside a `coverage` folder at the root of the project. You may try this if you wish.
 
