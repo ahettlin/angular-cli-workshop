@@ -18,7 +18,7 @@ Ahead of this workshop there is a small amount of setup required to install the 
 1. [Install](https://zoom.us/download) or [update Zoom](https://support.zoom.us/hc/en-us/articles/201362233-Upgrade-update-to-the-latest-version) if you plan on attending remotely.
 1. Please download, install, and configure the following tools:
     * [Node.js 16.16.0 with NPM 8.11.0 or newer](https://nodejs.org/en/download/)
-    * A terminal application. The Command Prompt on Windows or Terminal on OSX should be just fine unless you want something different.
+    * A terminal application. The Command Prompt on Windows or Terminal on macOS should be just fine unless you want something different.
     * A Git client. If you do not have one we recommend [GitHub Desktop](https://desktop.github.com/).
     * Your preferred text editor. Any basic editor will work, but we would highly recommend [Visual Studio Code](https://code.visualstudio.com/) to make things much easier.
 		* VS Code integrates both the terminal and Git client, and has shortcuts for debugging and testing for convenience.
