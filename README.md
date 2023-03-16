@@ -57,6 +57,6 @@ That's it!
 
 Since the application is going to be written from scratch, you can either follow the exercise instructions here on github, or you can clone the repository into a local directory so you can have the instructions open in your editor as you follow along. We would recommend cloning the repository. That way, if you fall behind during the workshop, you can quickly switch branches to catch back up. Each exercise branch has the result from the previous exercise.
 
-> **Note:** If you are starting with this repository, check out the `exercise-1` branch as your starting point. If you use the `main` branch, you will receive an error because this `README.md` file exists. 
+> **Note**: If you are starting with this repository, check out the `exercise-1` branch as your starting point. If you use the `main` branch, you will receive an error because this `README.md` file exists. 
 
 **Please contact your trainer if you have any issues during the setup process.**
