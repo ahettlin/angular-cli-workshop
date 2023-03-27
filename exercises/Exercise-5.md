@@ -59,6 +59,8 @@ The `ng update` command provides a convenient way to update packages to their mo
 
 The syntax is: `ng update [list of package names]`. By default, it will update to the latest stable version. You can use the `--next` option to install beta or pre-releast versions.
 
+Before you can run the update command, you need to make sure all pending changes are committed to your local repository. Otherwise, you will get an error. If you have cloned the repository, you can just commit locally without pushing.
+
 As an example of upgrading to the latest patch version of Angular 15 ([or look here to see if a newer version is available](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
 ```
 ng update @angular/cli@^15 @angular/core@^15

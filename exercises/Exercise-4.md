@@ -1,4 +1,5 @@
-# Angular CLI Workshop Exercise 4 - Routing
+# Angular CLI Workshop Exercise 4 - Routing <span style="position: absolute; right:0; bottom: 8px; font-size: 1rem">(~20-30 minutes)</span>
+(~15-20 minutes)
 
 We're pretty limited with a web application that has only one "page". In this exercise, we'll add a route to a details page for an individual todo item. There we can display more detail, add more actions, or do anything else we want on a secondary page. This lays the foundation for creating complex applications with many pages.
 
@@ -140,7 +141,7 @@ Finally, we need to move the styles. Move the `.add-item` class declaration from
 }
 ```
 
-If you don't see the changes reflected in your browser after saving, you may need to stop and restart `ng serve`. Sometimes more fundimental changes like adding/removing things from modules or routes aren't picked up properly.
+If you don't see the changes reflected in your browser after saving, you may need to stop and restart `ng serve`. Sometimes more fundamental changes like adding/removing things from modules or routes aren't picked up properly.
 
 The `AppComponent` has now been reduced to only managing things that are application-wide. In this case, it's just to provide a global header. For a larger project, this is convenient for adding application wide navigation, a footer, or anything else that you need applied to every page.
 

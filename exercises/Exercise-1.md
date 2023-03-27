@@ -1,4 +1,5 @@
 # Angular CLI Workshop Exercise 1 - Generating a new application
+(~15-20 minutes)
 
 In this exercise, we will generate a new project and explore everything that the Angular CLI gives us to start with. It takes care of a lot of boilerplate setup so that you can dive right into working on the important parts of your app and not get bogged down in setup and configuration.
 

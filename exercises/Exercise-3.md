@@ -1,4 +1,5 @@
 # Angular CLI Workshop Exercise 3 - Services
+(~6-10 minutes)
 
 As it stands, all the business logic and most of the state in our application is currently held in `app.component.ts`, with a bit of state also in `todo-item.model.ts`. This is ok for such a small application like this, but it quickly gets cumbersome when working with larger applications. That's where services come in. They are perfect for sharing state, business logic, or whatever else you want to make available to multiple components, or even other services, across your app.
 
@@ -110,7 +111,7 @@ For this example, we've cheated a little bit until now regarding state informati
 
 First, convert the `TodoItem` from a class to an interface that will match our hypothetical JSON data structure. Note that the `Date` fields have changed to `number` and we've added an `id` field (which will come in handy in the subsequent exercises). We lose our helper methods because interfaces can't be intstantiated and therefore can't have methods.
 
-`todo-item.model,ts`
+`todo-item.model.ts`
 ```typescript
 export interface TodoItem {
   id: number
