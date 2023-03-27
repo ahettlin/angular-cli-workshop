@@ -1,5 +1,4 @@
-# Angular CLI Workshop Exercise 4 - Routing <span style="position: absolute; right:0; bottom: 8px; font-size: 1rem">(~20-30 minutes)</span>
-(~15-20 minutes)
+# Angular CLI Workshop Exercise 4 - Routing
 
 We're pretty limited with a web application that has only one "page". In this exercise, we'll add a route to a details page for an individual todo item. There we can display more detail, add more actions, or do anything else we want on a secondary page. This lays the foundation for creating complex applications with many pages.
 
@@ -18,11 +17,11 @@ Or final app flow will look something like this:
 When we generated the initial project with the CLI back in Exercise 1, the project that was created had routing already set up for us. We've just been ignoring it until now. At the start of Exercise 2, we deleted a line of code from `app.component.html` that we need to put back. 
 
 Add
-```
+```html
 <router-outlet></router-outlet>
 ```
 
-to the bottom of `app.component.html`. This is where the contents of the currently-displayed "page" (route) will be rendered.
+to the bottom of `app.component.html`. This is where the contents of the currently-displayed route (page) will be rendered.
 
 ## Create a route for the list page
 

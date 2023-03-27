@@ -1,5 +1,4 @@
 # Angular CLI Workshop Exercise 1 - Generating a new application
-(~15-20 minutes)
 
 In this exercise, we will generate a new project and explore everything that the Angular CLI gives us to start with. It takes care of a lot of boilerplate setup so that you can dive right into working on the important parts of your app and not get bogged down in setup and configuration.
 
@@ -9,7 +8,7 @@ It's not necessary, but in order to make catching up easier if you get behind in
 
 Run the following command in your terminal. Again, make sure you run it in the directory the project repository was cloned into.
 
-  ```
+  ```console
   ng new angular-todo-list --directory ./ --style scss --routing true
   ```
 
@@ -24,7 +23,7 @@ A couple of notes:
 The `ng new` command has generated a fully-functional single-page application for us, ready to be customized to our needs. For now, let's run it and see what it's given us. 
 
 Run:
-```
+```console
 ng serve
 ```
 
@@ -63,7 +62,7 @@ It is not always appropriate to serve an application with `ng serve`. To generat
 The Angular CLI has also helpfully set us up with a testing framework.
 
 Run:
-```
+```console
 ng test
 ```
 

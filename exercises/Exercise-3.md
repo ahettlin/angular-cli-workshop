@@ -1,5 +1,4 @@
 # Angular CLI Workshop Exercise 3 - Services
-(~6-10 minutes)
 
 As it stands, all the business logic and most of the state in our application is currently held in `app.component.ts`, with a bit of state also in `todo-item.model.ts`. This is ok for such a small application like this, but it quickly gets cumbersome when working with larger applications. That's where services come in. They are perfect for sharing state, business logic, or whatever else you want to make available to multiple components, or even other services, across your app.
 
@@ -9,7 +8,7 @@ As it stands, all the business logic and most of the state in our application is
 Let's create a service to maintain the state of our application.
 
 Run
-```
+```console
 ng generate service todo
 ```
 
@@ -220,12 +219,12 @@ With these refactors, the application should continue to work as before, but it 
 ## Conclusion
 
 In this exercise, learned how to generate a shared service with business logic with the command
-```
+```console
 ng generate service [service name]
 ```
 
 It also has a shorthand version of
-```
+```console
 ng g s [service name]
 ```
 

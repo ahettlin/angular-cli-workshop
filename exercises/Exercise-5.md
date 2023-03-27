@@ -6,7 +6,7 @@ We have completed our Todo List application. There are a few more Angular CLI co
 Code linting is important for maintining code quality, enforcing stylistic standards, and potentially finding bugs early. The Angular CLI provides built-in support for ESLint and makes it easy to run it against your code.
 
 Run
-```
+```console
 ng lint
 ```
 
@@ -26,7 +26,7 @@ It seems like this will do what you want if you answer `Yes`, but unfortunately 
 > **Note**: For the next command you will need to specify the version of Angular that you have installed. You can check which version you have by running `ng version` if you recall from the pre-workshop setup. Replace the `14` in the command below with the major version of Angular that you have installed. Otherwise, you will have dependency errors.
 
 Run
-```
+```console
 ng add @angular-eslint/schematics@14
 ```
 
@@ -37,7 +37,7 @@ A side effect of this process is that we get to see a new CLI command `ng add`. 
 > **Why `ng add` and not `npm install`?** They both achieve the goal of adding dependiencies to your project, but with one noteable difference. While `npm install` will install the specified package and update your `package.json` file, `ng add` goes a step further and can perform project configuration and install additional dependencies if the package specifies any. If you were wondering about the term "schematics" from above, that's how Angular packages define these extra installation steps, in something called a "schematic". If you don't know whether the package you're installing has a schematic or not, it's best to stick with `ng add`.
 
 Now, try running the linting process again.
-```
+```console
 ng lint
 ```
 
@@ -62,7 +62,7 @@ The syntax is: `ng update [list of package names]`. By default, it will update t
 Before you can run the update command, you need to make sure all pending changes are committed to your local repository. Otherwise, you will get an error. If you have cloned the repository, you can just commit locally without pushing.
 
 As an example of upgrading to the latest patch version of Angular 15 ([or look here to see if a newer version is available](https://www.npmjs.com/package/@angular/core?activeTab=versions)), run
-```
+```console
 ng update @angular/cli@^15 @angular/core@^15
 ```
 
@@ -77,7 +77,7 @@ You can use the '--force' option to ignore incompatible peer dependencies and in
 
 This specific message is saying that the `@angular-eslint/schematics` package that we just installed isn't compatible with the version of Angular we are trying to upgrade to. We'll have to perform that upgrade manually, so for now, you can re-run the previous command with the `--force` option as the message suggests.
 
-```
+```console
 ng update @angular/cli@^15 @angular/core@^15 --force   
 ```
 
@@ -91,12 +91,12 @@ Your project should still build and run just fine with `ng serve` as long as the
 
 The last command that we will cover is the `ng doc` command. This is just a shortcut to open the [Angular documentation](https://angular.io) site and search for an API keyword. Note that this is not a generic documentation search, but rather a search for a specific Class, Method, Module, etc so that you can find the full API for that item.
 
-```
+```console
 ng doc [keyword]
 ```
 
 For example, you're working on implementing a form and you want to check all of the capabilities of a `FormControl`. You can use the following command to search the API documentation for that class:
-```
+```console
 ng doc FormControl
 ```
 
