@@ -9,7 +9,7 @@ During this workshop we will explore the Angular CLI (Command Line Interface) an
 * Lint code
 * Update dependencies
 
-> **Note:** No prior knowledge of Angular is required. However, some basic knowledge of HTML/CSS/TypeScript would be helpful.
+> **Note**: No prior knowledge of Angular is required. However, some basic knowledge of HTML/CSS/TypeScript would be helpful.
 
 ## Setup
 
