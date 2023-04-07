@@ -13,13 +13,13 @@ During this workshop we will explore the Angular CLI (Command Line Interface) an
 
 ## Setup
 
-Ahead of this workshop there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training on.
+Ahead of this workshop, there is a small amount of setup required to install the necessary tooling. Some of the version numbers mentioned below are older, but are meant to be a reference for the minimum we have tested this training on.
 
 1. [Install](https://zoom.us/download) or [update Zoom](https://support.zoom.us/hc/en-us/articles/201362233-Upgrade-update-to-the-latest-version) if you plan on attending remotely.
 1. Download, install, and configure the following tools:
     * [Node.js 16.16.0 with NPM 8.11.0 or newer](https://nodejs.org/en/download/)
     * A terminal application. The Command Prompt on Windows or Terminal on macOS should be just fine unless you want something different.
-    * A Git client. If you do not have one we recommend [GitHub Desktop](https://desktop.github.com/).
+    * A Git client if you want to be able to check out completed exercises if you fall behind. If you do not have one, we recommend [GitHub Desktop](https://desktop.github.com/).
     * Your preferred text editor. Any basic editor will work, but we would highly recommend [Visual Studio Code](https://code.visualstudio.com/) to make things much easier.
 		* VS Code integrates both the terminal and Git client, and has shortcuts for debugging and testing for convenience.
 		* You can optionally install the `Angular Language Service` extension for VS Code to provide some helpful shortcuts and extra compilation error messages. (To install, select Extensions on the left-hand sidebar, which looks like four squares with one broken away, and then search for the extenstion at the top. Select it and click the Install button.)
